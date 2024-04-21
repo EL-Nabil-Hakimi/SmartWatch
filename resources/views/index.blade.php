@@ -16,6 +16,8 @@
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
 		<!-- Bootstrap CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -102,22 +104,7 @@
 					<!-- End Column 1 -->
 
 					<!-- Start Column 2 -->
-					@for ($i = 0; $i < 3; $i++)
-						
-					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="cart.html">
-							<img src="https://purepng.com/public/uploads/large/apple-watch-pcq.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Montre Intelligente Nordique</h3>
-							<strong class="product-price">$50.00</strong>
-
-							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
-							</span>
-						</a>
-					</div> 
-					@endfor
-
-				
+					@include('layout.products')
 
 				</div>
 			</div>
@@ -360,7 +347,7 @@
 
 		<!-- End Footer Section -->	
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 
 <!-- Script pour le carrousel -->
 <script>
@@ -384,6 +371,11 @@
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+		@include('layout.scripts')
+		
 	</body>
 
 	

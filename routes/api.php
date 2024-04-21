@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReservationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::post('/createwatch' , [ProductController::class , 'create']);
+
+
+Route::get('/reservation/{id}/{p_id}', [ReservationController::class, 'store']);
+Route::delete('/reservation/{id}', [ReservationController::class, 'delete']);
+Route::get('/reservation', [ReservationController::class, 'show']);
